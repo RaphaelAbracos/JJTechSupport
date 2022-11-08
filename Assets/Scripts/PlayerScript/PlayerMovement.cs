@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -41,6 +42,13 @@ public class PlayerMovement : MonoBehaviour
             rb.drag = groundDrag;
         else
             rb.drag = 0;
+
+        if(Input.GetKeyDown(KeyCode.B)){
+
+			if(SceneManager.GetActiveScene().buildIndex == 1){
+				SceneManager.LoadScene(0);
+			}
+        }
     }
 
     private void FixedUpdate()
