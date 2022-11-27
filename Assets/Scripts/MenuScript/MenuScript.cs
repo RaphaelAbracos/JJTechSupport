@@ -12,4 +12,10 @@ public class MenuScript : MonoBehaviour
      public void QuitGame(){
         Application.Quit();
     }
+
+    public void Resume()
+    {
+        SceneManager.LoadScene(1);
+    }
+
 }
