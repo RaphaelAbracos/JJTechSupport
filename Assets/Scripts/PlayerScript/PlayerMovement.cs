@@ -15,6 +15,8 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask whatIsGround;
     bool grounded;
 
+    private Animator animator;
+
     public Transform orientation;
 
     float horizontalInput;
@@ -28,6 +30,8 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
+
+        animator = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
@@ -36,7 +40,6 @@ public class PlayerMovement : MonoBehaviour
         grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround);
         MyInput();
         SpeedControl();
-
         if (grounded)
             rb.drag = groundDrag;
         else
@@ -52,18 +55,27 @@ public class PlayerMovement : MonoBehaviour
     {
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
+
     }
 
     private void MovePlayer()
     {
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
-
+        if (moveDirection.x != 0 || moveDirection.z != 0)
+        {
+            animator.SetBool("isWalking", true);
+        }
+        else
+        {   
+            animator.SetBool("isWalking", false);
+        }
         rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
     }
 
     private void SpeedControl()
     {
         Vector3 flatVel = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
+
 
         if(flatVel.magnitude > moveSpeed)
         {
