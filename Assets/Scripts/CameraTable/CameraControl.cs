@@ -16,7 +16,7 @@ public class CameraControl : MonoBehaviour
         {
             NumeroMaximo = cameras.Length;
             numeroCameras = 1;
-
+            
 
             foreach (Camera obj in cameras)
             {
@@ -30,12 +30,17 @@ public class CameraControl : MonoBehaviour
     }
     void Update()
     {
-        Vector3 posicaoFinalComputador = new Vector3(10.2539997f, 1.54400003f, 8.5909996f);
+
+
+     GameObject interfaceControl = GameObject.Find("InterfaceControl");
+    Vector3 posicaoFinalComputador = new Vector3(10.2539997f, 1.54400003f, 8.5909996f);
         Vector3 posicaoFinalMesa = new Vector3(9.76200008f, 1.84300005f, 9.535585f);
         
 
         if (Input.GetKeyDown("c") && numeroCameras < NumeroMaximo)
         {
+
+            interfaceControl.GetComponent<InterfaceScript>().isPontoLigado(false);
             numeroCameras++;
             foreach (Camera obj in cameras)
             {
@@ -44,7 +49,8 @@ public class CameraControl : MonoBehaviour
 
             if (numeroCameras == 1)
             {
-                //Computador
+                interfaceControl.GetComponent<InterfaceScript>().isPontoLigado(true);
+                //mesa
                 GameObject.Find("Player").GetComponent<PlayerMovement>().enabled = true;
                 Cursor.visible = false;
                 Cursor.lockState = CursorLockMode.Locked;
@@ -52,7 +58,8 @@ public class CameraControl : MonoBehaviour
             }
             else
             {
-                //mesa
+                interfaceControl.GetComponent<InterfaceScript>().isPontoLigado(false);
+                //Computador
                 GameObject.Find("Player").GetComponent<PlayerMovement>().enabled = false;
                 Cursor.visible = true;
                 Cursor.lockState = CursorLockMode.None;
@@ -69,6 +76,7 @@ public class CameraControl : MonoBehaviour
 
             if (numeroCameras == 1)
             {
+                interfaceControl.GetComponent<InterfaceScript>().isPontoLigado(false);
                 //Computador
                 GameObject.Find("Player").GetComponent<PlayerMovement>().enabled = true;
                 Cursor.visible = false;
@@ -77,6 +85,7 @@ public class CameraControl : MonoBehaviour
             }
             else
             {
+                interfaceControl.GetComponent<InterfaceScript>().isPontoLigado(false);
                 GameObject.Find("Player").GetComponent<PlayerMovement>().enabled = false;
                 Cursor.visible = true;
                 Cursor.lockState = CursorLockMode.None;

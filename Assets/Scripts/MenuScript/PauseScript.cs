@@ -8,6 +8,17 @@ public class PauseScript : MonoBehaviour
     public bool isPaused = false;
     [SerializeField]
     GameObject pausePasta;
+    [SerializeField]
+    GameObject ControlesText;
+    [SerializeField]
+    GameObject VoltarButton;
+    [SerializeField]
+    GameObject PauseSairButton;
+    [SerializeField]
+    GameObject PauseResumeButton;
+    [SerializeField]
+    GameObject PauseControlesButton;
+
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +41,7 @@ public class PauseScript : MonoBehaviour
             isPaused = !isPaused;
             if (isPaused)
             {
+                Cursor.visible = true;
                 Cursor.lockState = CursorLockMode.None;
                 Time.timeScale = 0;
                 pausePasta.SetActive(true);
@@ -42,6 +54,7 @@ public class PauseScript : MonoBehaviour
             }
             else
             {
+                
                 Time.timeScale = 1;
                 pausePasta.SetActive(false);
                 GameObject camera = GameObject.FindGameObjectWithTag("CameraTable");
@@ -99,6 +112,30 @@ public class PauseScript : MonoBehaviour
         Application.Quit();
 
     }
+    public void opcoes()
+    {
+       
 
+        ControlesText.SetActive(true);
+        VoltarButton.SetActive(true);
+
+        PauseSairButton.SetActive(false);
+        PauseResumeButton.SetActive(false);
+        PauseControlesButton.SetActive(false);
+    }
+    public void voltarOpcoes()
+    {
+
+
+        ControlesText.SetActive(false);
+        VoltarButton.SetActive(false);
+
+        PauseSairButton.SetActive(true);
+        PauseResumeButton.SetActive(true);
+        PauseControlesButton.SetActive(true);
+
+
+
+    }
 }
 
