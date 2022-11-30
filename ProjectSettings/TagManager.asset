@@ -7,8 +7,14 @@ TagManager:
   - CameraTable
   - PastaPause
   - Computador
-  - Waypoint
-  - NPC
+  - PauseMenu
+  - ControlesMenu
+  - OpcoesMenu
+  - ControlesText
+  - VoltarButton
+  - PauseSairButton
+  - PauseResumeButton
+  - PauseControlesButton
   layers:
   - Default
   - TransparentFX

@@ -12,6 +12,14 @@ public class showFPS : MonoBehaviour
 
         deltaTime += (Time.deltaTime - deltaTime) * 0.1f;
         float fps = 1.0f / deltaTime;
-        fpsText.text = Mathf.Ceil(fps).ToString();
+        if(Mathf.Ceil(fps) > 1000)
+        {
+            fpsText.text = "";
+        }
+        else
+        {
+            fpsText.text = Mathf.Ceil(fps).ToString();
+        }
+        
     }
 }
