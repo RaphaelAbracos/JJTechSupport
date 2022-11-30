@@ -7,6 +7,14 @@ TagManager:
   - CameraTable
   - PastaPause
   - Computador
+  - PauseMenu
+  - ControlesMenu
+  - OpcoesMenu
+  - ControlesText
+  - VoltarButton
+  - PauseSairButton
+  - PauseResumeButton
+  - PauseControlesButton
   layers:
   - Default
   - TransparentFX

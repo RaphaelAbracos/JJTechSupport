@@ -14,6 +14,8 @@ public class MoveObjectAndConect : MonoBehaviour
     [SerializeField]
     new Camera camera;
 
+    public bool isPlaca;
+
     private GameObject cameraTable;
     public bool isConected;
     bool isDragging;
@@ -42,7 +44,10 @@ public class MoveObjectAndConect : MonoBehaviour
             {
                 rb.isKinematic = true;
                 rb.useGravity = true;
+              
                 transform.root.position = Vector3.MoveTowards(transform.root.position, conector.position, 0.02f);
+                
+               // transform.root.rotation = new Vector7(89.2972412f, 184.819687f, 270.947571f,10f);
 
             }
             if (distanceFromDestiny < 0.01f)
@@ -76,6 +81,10 @@ public class MoveObjectAndConect : MonoBehaviour
             rb.useGravity = false;
             Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
             Vector3 curPosition = camera.ScreenToWorldPoint(curScreenPoint) + offset;
+            if(curPosition.y < 1.065432)
+            {
+                curPosition.y = 1.085432f;
+            }
             transform.position = curPosition;
 
         }
