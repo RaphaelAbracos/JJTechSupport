@@ -15,6 +15,9 @@ TagManager:
   - PauseSairButton
   - PauseResumeButton
   - PauseControlesButton
+  - Waypoint
+  - NPC
+  - PC
   layers:
   - Default
   - TransparentFX
