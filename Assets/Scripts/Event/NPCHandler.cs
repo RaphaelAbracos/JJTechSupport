@@ -116,12 +116,12 @@ public class NPCHandler : MonoBehaviour
         }
         if (PlayerComplete.isCompleted && action == 2 && !isLoading && controleFalas.isFinish)
         {
-            controleFalas.isMontouPc = true;
             bool isInstall = buttonInstall.GetComponentInChildren<InstallProgram>().isInstalou;
             if (isInstall)
             {
+                controleFalas.isMontouPc = true;
                 isLoading = true;
-                yield return new WaitForSeconds(110);
+                yield return new WaitForSeconds(90);
                 Pc_teste2.SetActive(false);
                 Destroy(NPC_3);
                 PlayerComplete.isCompleted = false;
