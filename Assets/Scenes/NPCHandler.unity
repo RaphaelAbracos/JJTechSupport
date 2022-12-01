@@ -2407,6 +2407,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPaused: 0
   pausePasta: {fileID: 1985097981}
+  ControlesText: {fileID: 0}
+  VoltarButton: {fileID: 0}
+  PauseSairButton: {fileID: 0}
+  PauseResumeButton: {fileID: 0}
+  PauseControlesButton: {fileID: 0}
 --- !u!1 &976234736
 GameObject:
   m_ObjectHideFlags: 0
@@ -3532,7 +3537,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 31
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1425420398
 GameObject:
@@ -5516,7 +5521,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1717863713678381817, guid: 3d650bfc011200e458842afea94cd826, type: 3}
       propertyPath: m_RootOrder
-      value: 30
+      value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 1717863713678381817, guid: 3d650bfc011200e458842afea94cd826, type: 3}
       propertyPath: m_LocalPosition.x

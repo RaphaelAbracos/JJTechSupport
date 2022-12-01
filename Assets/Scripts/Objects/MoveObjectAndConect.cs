@@ -14,8 +14,7 @@ public class MoveObjectAndConect : MonoBehaviour
     [SerializeField]
     new Camera camera;
 
-    public bool isPlaca;
-
+    [SerializeField]
     private GameObject cameraTable;
     public bool isConected;
     bool isDragging;
@@ -29,7 +28,7 @@ public class MoveObjectAndConect : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
-        cameraTable = GameObject.FindWithTag("CameraTable");
+        //cameraTable = GameObject.FindGameObjectWithTag("CameraTable");
     }
 
     void FixedUpdate()
@@ -38,17 +37,14 @@ public class MoveObjectAndConect : MonoBehaviour
 
         if (!isDragging && !isConected)
         {
-            distanceFromDestiny = Vector3.Distance(transform.root.position, conector.position);
+            distanceFromDestiny = Vector3.Distance(transform.position, conector.position);
 
             if (distanceFromDestiny < minimumDistanceConnector)
             {
                 rb.isKinematic = true;
                 rb.useGravity = true;
               
-                transform.root.position = Vector3.MoveTowards(transform.root.position, conector.position, 0.02f);
-                
-               // transform.root.rotation = new Vector7(89.2972412f, 184.819687f, 270.947571f,10f);
-
+                transform.position = Vector3.MoveTowards(transform.position, conector.position, 0.02f);
             }
             if (distanceFromDestiny < 0.01f)
             {
@@ -56,7 +52,7 @@ public class MoveObjectAndConect : MonoBehaviour
                 rb.useGravity = false;
                 isConected = true;
                 rb.transform.rotation = Quaternion.Euler(rotationPosition);
-                transform.root.position = conector.position;
+                transform.position = conector.position;
             }
 
         }

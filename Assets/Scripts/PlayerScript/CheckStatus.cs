@@ -9,11 +9,16 @@ public class CheckStatus : MonoBehaviour
 
     MoveObjectAndConect[] computerParts;
 
+    private GameObject pc;
+
     void Start()
     {
         stopwatch = 0;
         isCompleted = false;
-        computerParts = FindObjectsOfType<MoveObjectAndConect>();
+        pc = GameObject.FindGameObjectWithTag("PC");
+        computerParts = pc.GetComponentsInChildren<MoveObjectAndConect>();
+        pc.SetActive(false);
+        //computerParts = FindObjectsOfType<MoveObjectAndConect>();
         
     }
     void Update()
@@ -30,7 +35,7 @@ public class CheckStatus : MonoBehaviour
                     countConectedParts++;
                 }
             }
-            if(countConectedParts >= computerParts.Length)
+            if(countConectedParts >= computerParts.Length && pc.activeSelf)
             {
                 isCompleted = true;
             }
@@ -39,5 +44,14 @@ public class CheckStatus : MonoBehaviour
                 isCompleted = false;
             }
         }
+    }
+
+    public void ResetProperties()
+    {
+        stopwatch = 0;
+        isCompleted = false;
+        pc = GameObject.FindGameObjectWithTag("PC");
+        computerParts = pc.GetComponentsInChildren<MoveObjectAndConect>();
+        //pc.SetActive(false);
     }
 }
