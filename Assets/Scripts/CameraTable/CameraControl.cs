@@ -9,9 +9,9 @@ public class CameraControl : MonoBehaviour
     public Camera[] cameras;
     public int numeroCameras;
     public int NumeroMaximo;
-
     void Start()
     {
+        
         try
         {
             NumeroMaximo = cameras.Length;
@@ -40,6 +40,7 @@ public class CameraControl : MonoBehaviour
         if (Input.GetKeyDown("c") && numeroCameras < NumeroMaximo)
         {
 
+            interfaceControl.GetComponent<InterfaceScript>().isLigarLegendaImagens(false);
             interfaceControl.GetComponent<InterfaceScript>().isPontoLigado(false);
             numeroCameras++;
             foreach (Camera obj in cameras)
@@ -49,8 +50,9 @@ public class CameraControl : MonoBehaviour
 
             if (numeroCameras == 1)
             {
+
                 interfaceControl.GetComponent<InterfaceScript>().isPontoLigado(true);
-                //mesa
+                //Computador
                 GameObject.Find("Player").GetComponent<PlayerMovement>().enabled = true;
                 Cursor.visible = false;
                 Cursor.lockState = CursorLockMode.Locked;
@@ -58,8 +60,10 @@ public class CameraControl : MonoBehaviour
             }
             else
             {
+
+                interfaceControl.GetComponent<InterfaceScript>().isLigarLegendaImagens(true);
                 interfaceControl.GetComponent<InterfaceScript>().isPontoLigado(false);
-                //Computador
+                //mesa
                 GameObject.Find("Player").GetComponent<PlayerMovement>().enabled = false;
                 Cursor.visible = true;
                 Cursor.lockState = CursorLockMode.None;
@@ -69,6 +73,7 @@ public class CameraControl : MonoBehaviour
         }
         if (Input.GetKeyDown("c") && numeroCameras == NumeroMaximo)
         {
+            interfaceControl.GetComponent<InterfaceScript>().isLigarLegendaImagens(false);
             foreach (Camera obj in cameras)
             {
                 obj.gameObject.SetActive(false);

@@ -7,6 +7,8 @@ public class InterfaceScript : MonoBehaviour
 {
    
     public Text ponto;
+    public GameObject interfacePecas;
+
     public void isPontoLigado(bool isLigado)
     {
         
@@ -21,4 +23,9 @@ public class InterfaceScript : MonoBehaviour
         }
 
     }
+
+    public void isLigarLegendaImagens(bool isLigado)
+    {
+        interfacePecas.SetActive(isLigado);
+}
 }

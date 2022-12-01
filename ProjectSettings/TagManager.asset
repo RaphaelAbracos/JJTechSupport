@@ -15,6 +15,9 @@ TagManager:
   - PauseSairButton
   - PauseResumeButton
   - PauseControlesButton
+  - InterfacePecas
+  - TriggerEntrou
+  - TriggerPlayer
   layers:
   - Default
   - TransparentFX
