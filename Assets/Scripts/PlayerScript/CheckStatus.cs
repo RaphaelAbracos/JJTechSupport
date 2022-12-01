@@ -5,11 +5,14 @@ using UnityEngine;
 public class CheckStatus : MonoBehaviour
 {
     public bool isCompleted;
+    public bool isPecasCompleted;
     float stopwatch;
 
     MoveObjectAndConect[] computerParts;
+    LimparObjeto[] pecasPartes;
 
     private GameObject pc;
+    private GameObject pecas;
 
     void Start()
     {
@@ -18,8 +21,10 @@ public class CheckStatus : MonoBehaviour
         pc = GameObject.FindGameObjectWithTag("PC");
         computerParts = pc.GetComponentsInChildren<MoveObjectAndConect>();
         pc.SetActive(false);
-        //computerParts = FindObjectsOfType<MoveObjectAndConect>();
-        
+
+        pecas = GameObject.FindGameObjectWithTag("Pecas");
+        pecasPartes = pecas.GetComponentsInChildren<LimparObjeto>();
+        pecas.SetActive(false);
     }
     void Update()
     {
@@ -28,6 +33,7 @@ public class CheckStatus : MonoBehaviour
         {
             stopwatch = 0;
             int countConectedParts = 0;
+            
             for(int x = 0; x< computerParts.Length; x++)
             {
                 if (computerParts[x].isConected)
@@ -43,7 +49,25 @@ public class CheckStatus : MonoBehaviour
             {
                 isCompleted = false;
             }
+
+            int countPecasParts = 0;
+            for(int i = 0; i<  pecasPartes.Length; i++)
+            {
+                if (pecasPartes[i].isCompleted)
+                {
+                    countPecasParts++;
+                }
+            }
+            if(countPecasParts >= pecasPartes.Length && pecas.activeSelf)
+            {
+                isPecasCompleted = true;
+            }
+            else
+            {
+                isPecasCompleted = false;
+            }
         }
+
     }
 
     public void ResetProperties()

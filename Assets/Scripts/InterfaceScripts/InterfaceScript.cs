@@ -27,5 +27,5 @@ public class InterfaceScript : MonoBehaviour
     public void isLigarLegendaImagens(bool isLigado)
     {
         interfacePecas.SetActive(isLigado);
-}
+    }
 }

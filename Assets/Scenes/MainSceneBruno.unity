@@ -2553,6 +2553,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   legenda: {fileID: 1933041771}
+  nome: {fileID: 1867189537}
   CronometroText: {fileID: 307799420}
   stringArray:
   - 
@@ -2566,6 +2567,7 @@ MonoBehaviour:
   isFinish: 1
   isPlayerInTable: 0
   letterPause: 0.05
+  isAgnes: 0
 --- !u!1 &576376171
 GameObject:
   m_ObjectHideFlags: 0
@@ -7017,7 +7019,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1567249728}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 81543f44f0f550245b3a3562b10543f2, type: 3}
   m_Name: 

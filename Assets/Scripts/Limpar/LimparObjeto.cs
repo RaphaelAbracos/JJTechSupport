@@ -7,12 +7,14 @@ public class LimparObjeto : MonoBehaviour
 {
     [SerializeField]
     GameObject objetoLimppo;
+    public bool isCompleted;
 
     // Start is called before the first frame update
 
     void Start()
     {
         objetoLimppo.SetActive(false);
+        isCompleted = false;
 
     }
 
@@ -25,5 +27,6 @@ public class LimparObjeto : MonoBehaviour
     {
         objetoLimppo.SetActive(true);
         this.gameObject.SetActive(false);
+        isCompleted = true;
     }
 }

@@ -18,6 +18,10 @@ TagManager:
   - InterfacePecas
   - TriggerEntrou
   - TriggerPlayer
+  - Waypoint
+  - NPC
+  - PC
+  - Pecas
   layers:
   - Default
   - TransparentFX
