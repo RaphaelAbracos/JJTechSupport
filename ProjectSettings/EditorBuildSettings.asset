@@ -8,16 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: b8f9339b737ccc242a994eb0d23fb9e4
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: Assets/Scenes/RaphaelScene.unity
-    guid: ad0fea7c191e3a048823b9d3f1f2abe7
-  - enabled: 0
-    path: Assets/Scenes/NPCMoviment.unity
-    guid: 2f495e14694fda64b83d620c937f7ebd
   - enabled: 1
-    path: Assets/Scenes/MainScene.unity
-    guid: c4ff944132479b44ea4b7b88c3af7443
+    path: Assets/Scenes/MainSceneRaphael.unity
+    guid: d0edaf96a68f7e84bbb9a3445ed2b489
   m_configObjects: {}
