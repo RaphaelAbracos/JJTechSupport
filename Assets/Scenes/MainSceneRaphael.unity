@@ -3545,11 +3545,18 @@ MonoBehaviour:
   seg: 0
   min: 0
   hor: 0
-  textoLegenda: 
   isFinish: 1
   isPlayerInTable: 0
   letterPause: 0.05
   isAgnes: 0
+  isGaroto: 0
+  isAssassino: 0
+  isLimpaPecasAcabou: 0
+  isColocouRAM: 0
+  isMontouPc: 0
+  vezesLimpa: 0
+  vezesMontaRam: 0
+  vezesMontaPC: 0
 --- !u!114 &901888484
 MonoBehaviour:
   m_ObjectHideFlags: 0
