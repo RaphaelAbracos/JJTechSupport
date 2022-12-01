@@ -299,7 +299,7 @@ public class ControleFalas : MonoBehaviour
             {
                 isFinish = false;
 
-                nome.text = "Garoto:";
+                nome.text = "Morador Novo:";
                 legenda.text = "Opa, moço. Você tem RAM a do meu PC queimou";
 
                 StartCoroutine(waiter(4));
@@ -333,7 +333,7 @@ public class ControleFalas : MonoBehaviour
             {
                 isFinish = false;
                 Missao1.color = new Color(255, 244, 0, 255);
-                nome.text = "Garoto:";
+                nome.text = "Morador Novo:";
                 legenda.text = "Cara, cê viu a notícia? Muito doido";
 
                 StartCoroutine(waiter(3));
@@ -342,7 +342,7 @@ public class ControleFalas : MonoBehaviour
             {
                 isFinish = false;
 
-                nome.text = "Garoto:";
+                nome.text = "Morador Novo:";
                 legenda.text = "Essa cidade tá ficando cada vez melhor. Esses dias tavam me contando de um assassinato que rolou aqui uns anos atrás. Falaram que a menina ficou cinco dias presa com um cara e acharam ela só duas semanas depois.";
 
                 StartCoroutine(waiter(8));
@@ -351,7 +351,7 @@ public class ControleFalas : MonoBehaviour
             {
                 isFinish = false;
 
-                nome.text = "Garoto:";
+                nome.text = "Morador Novo:";
                 legenda.text = "Levaram ela do lado da escola, cê acredita? É muita incompetência mesmo, ainda mais quando você pensa que…";
 
                 StartCoroutine(waiter(6));
@@ -369,7 +369,7 @@ public class ControleFalas : MonoBehaviour
             {
                 isFinish = false;
 
-                nome.text = "Garoto:";
+                nome.text = "Morador Novo:";
                 legenda.text = "Nossa, calma cara. Beleza, tô vazando. ";
 
                 StartCoroutine(waiter(4));
