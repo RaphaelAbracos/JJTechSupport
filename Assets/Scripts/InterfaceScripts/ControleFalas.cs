@@ -10,6 +10,11 @@ public class ControleFalas : MonoBehaviour
     public TMPro.TextMeshProUGUI legenda;
     public TMPro.TextMeshProUGUI nome;
     public TMPro.TextMeshProUGUI CronometroText;
+
+    public TMPro.TextMeshProUGUI Missao;
+    public TMPro.TextMeshProUGUI Missao1;
+    public TMPro.TextMeshProUGUI Missao2;
+
     public string[] stringArray;
 
     int i = 0;
@@ -239,7 +244,7 @@ public class ControleFalas : MonoBehaviour
             if (isLimpaPecasAcabou && isFinish && isAgnes && legenda.text.Substring(0, 9).Equals("LimpandoP"))
             {
                 isFinish = false;
-
+                Missao.color = new Color(255, 244, 0, 255);
                 nome.text = "Agnes:";
                 legenda.text = "Você viu a notícia sobre a prisão? Fiquei horrorizada. Justo hoje também. ";
                 StartCoroutine(waiter(5));
@@ -327,7 +332,7 @@ public class ControleFalas : MonoBehaviour
             if (isFinish && isGaroto && isColocouRAM && legenda.text.Substring(0, 9).Equals("Colocando"))
             {
                 isFinish = false;
-
+                Missao1.color = new Color(255, 244, 0, 255);
                 nome.text = "Garoto:";
                 legenda.text = "Cara, cê viu a notícia? Muito doido";
 
@@ -475,6 +480,7 @@ public class ControleFalas : MonoBehaviour
             if (isFinish && isAssassino && isMontouPc && legenda.text.Substring(0, 9).Equals("MontandoP"))
             {
                 isFinish = false;
+                Missao2.color = new Color(255, 244, 0, 255);
                 nome.text = "Homem:";
                 legenda.text = "Você mora aqui há bastante tempo?";
 
