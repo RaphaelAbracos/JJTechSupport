@@ -18,12 +18,14 @@ public class NPCHandler : MonoBehaviour
     GameObject NPC_1;
     GameObject NPC_2;
     GameObject NPC_3;
+    public bool isAgnisleft;
     int action;
     bool isLoading;
     bool isStart = true;
     // Start is called before the first frame update
     void Start()
     {
+        isAgnisleft = false;
         action = 0;
         isLoading = false;
         PlayerComplete = FindObjectOfType<CheckStatus>();
@@ -37,42 +39,46 @@ public class NPCHandler : MonoBehaviour
 
         StartCoroutine(Action());
         StartCoroutine(StartScene());
-
-        //if (PlayerComplete.isCompleted && action == 0)
-        //{
-        //    Pc_teste.SetActive(false);
-        //    Destroy(NPC_1);
-        //    NPC_2 = Instantiate(prefabs[1], spawnPosition.position, Quaternion.identity);
-        //    PlayerComplete.isCompleted = false;
-        //    action++;
-        //}
-        //if (PlayerComplete.isCompleted && action == 1)
-        //{
-        //    Pc_teste2.SetActive(false);
-        //    Destroy(NPC_2);
-        //    //NPC_2 = Instantiate(prefabs[1], spawnPosition.position, Quaternion.identity);
-        //    PlayerComplete.isCompleted = false;
-        //    action++;
-        //}
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
 
-        if (other.CompareTag("NPC") && action == 0)
+        if (other.CompareTag("NPC") && action == 0 && controleFalas.isFinish)
         {
-            Pecas.SetActive(true);
+            //Pecas.SetActive(true);
+            controleFalas.isAgnes = true;
             //Pc_teste.SetActive(true);
+
         }
-        if (other.CompareTag("NPC") && action == 1)
+        if (other.CompareTag("NPC") && action == 1 && controleFalas.isFinish)
         {
-            Pc_teste.SetActive(true);
+            //Pc_teste.SetActive(true);
+            controleFalas.isGaroto = true;
         }
-        if (other.CompareTag("NPC") && action == 2)
+        if (other.CompareTag("NPC") && action == 2 && controleFalas.isFinish)
         {
-            Pc_teste2.SetActive(true);
-            PlayerComplete.ResetProperties();
+            //Pc_teste2.SetActive(true);
+            //PlayerComplete.ResetProperties();
+            controleFalas.isAssassino = true;
         }
+    }
+    
+
+    public void ChamarPecas()
+    {
+        Pecas.SetActive(true);
+    }
+
+    public void ChamarRAM()
+    {
+       Pc_teste.SetActive(true);
+    }
+
+    public void ChamarPlaca()
+    {
+        Pc_teste2.SetActive(true);
+        PlayerComplete.ResetProperties();
     }
 
     void SpawnRandomPrefab()
@@ -83,22 +89,24 @@ public class NPCHandler : MonoBehaviour
     IEnumerator Action()
     {
 
-        if (PlayerComplete.isPecasCompleted && action == 0 && !isLoading)
+        if (PlayerComplete.isPecasCompleted && action == 0 && !isLoading && controleFalas.isFinish)
         {
             isLoading = true;
-            yield return new WaitForSeconds(5);
+            controleFalas.isLimpaPecasAcabou = true;
+            yield return new WaitForSeconds(21);
             Pecas.SetActive(false);
             Destroy(NPC_1);
             NPC_2 = Instantiate(prefabs[1], spawnPosition.position, Quaternion.identity);
             PlayerComplete.isCompleted = false;
-            action++;
             isLoading = false;
+            action++;
         }
 
-        if (PlayerComplete.isCompleted && action == 1 && !isLoading)
+        if (PlayerComplete.isCompleted && action == 1 && !isLoading && controleFalas.isFinish)
         {
             isLoading = true;
-            yield return new WaitForSeconds(5);
+            controleFalas.isColocouRAM = true;
+            yield return new WaitForSeconds(25);
             Pc_teste.SetActive(false);
             Destroy(NPC_2);
             NPC_3 = Instantiate(prefabs[2], spawnPosition.position, Quaternion.identity);
@@ -106,13 +114,14 @@ public class NPCHandler : MonoBehaviour
             action++;
             isLoading = false;
         }
-        if (PlayerComplete.isCompleted && action == 2 && !isLoading)
+        if (PlayerComplete.isCompleted && action == 2 && !isLoading && controleFalas.isFinish)
         {
+            controleFalas.isMontouPc = true;
             bool isInstall = buttonInstall.GetComponentInChildren<InstallProgram>().isInstalou;
             if (isInstall)
             {
                 isLoading = true;
-                yield return new WaitForSeconds(5);
+                yield return new WaitForSeconds(110);
                 Pc_teste2.SetActive(false);
                 Destroy(NPC_3);
                 PlayerComplete.isCompleted = false;
@@ -124,13 +133,12 @@ public class NPCHandler : MonoBehaviour
 
     IEnumerator StartScene()
     {
-        if (controleFalas.isPlayerInTable && isStart)
+        if (controleFalas.isPlayerInTable && isStart && controleFalas.isFinish)
         {
             isStart = false;
             yield return new WaitForSeconds(10);
             NPC_1 = Instantiate(prefabs[0], spawnPosition.position, Quaternion.identity);
             yield return new WaitForSeconds(3);
-            controleFalas.isAgnes = true;
         }
     }
 }
