@@ -13,6 +13,7 @@ public class NPCHandler : MonoBehaviour
     [SerializeField] private GameObject Pecas;
     [SerializeField] private Transform PcPosition;
     [SerializeField] private GameObject buttonInstall;
+    public GameOverScreen gameOverScreen;
     private CheckStatus PlayerComplete;
     private ControleFalas controleFalas;
     GameObject NPC_1;
@@ -123,7 +124,7 @@ public class NPCHandler : MonoBehaviour
                 isLoading = true;
                 yield return new WaitForSeconds(90);
                 Pc_teste2.SetActive(false);
-                Destroy(NPC_3);
+                gameOverScreen.Setup();
                 PlayerComplete.isCompleted = false;
                 action++;
                 isLoading = false;

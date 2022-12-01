@@ -409,7 +409,7 @@ public class ControleFalas : MonoBehaviour
                 isFinish = false;
 
                 nome.text = "Homem:";
-                legenda.text = "Eu queria que você montasse um computador pra mim.";
+                legenda.text = "Eu queria que você montasse um computador pra mim com o software RBCR nele.";
 
                 StartCoroutine(waiter(4));
             }
