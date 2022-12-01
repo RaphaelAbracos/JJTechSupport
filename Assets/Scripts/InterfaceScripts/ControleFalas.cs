@@ -30,6 +30,8 @@ public class ControleFalas : MonoBehaviour
     public bool isColocouRAM = false;
     public bool isMontouPc = false;
 
+    NPCHandler NPCHandler;
+
     public int vezesLimpa = 0;
     public int vezesMontaRam = 0;
     public int vezesMontaPC= 0;
@@ -40,7 +42,8 @@ public class ControleFalas : MonoBehaviour
         StartCoroutine("cronometro");
         legenda.text = "Texto inicial";
         legenda.fontStyle = FontStyles.Bold;
-        
+        NPCHandler = FindObjectOfType<NPCHandler>();
+
         //StartCoroutine(TypeText(0));
 
 
@@ -219,6 +222,7 @@ public class ControleFalas : MonoBehaviour
             {
                 nome.text = "";
                 legenda.text = "";
+                NPCHandler.ChamarPecas();
                 /*isFinish = false;
                 isPlayerInTable = false;
 
@@ -271,7 +275,7 @@ public class ControleFalas : MonoBehaviour
             if (isFinish && legenda.text.Substring(0, 9).Equals("Você tem "))
             {
                 isFinish = false;
-
+                NPCHandler.isAgnisleft = true;
                 nome.text = "Rádio:";
                 legenda.text = "Acabamos de receber a confirmação que alguns detentos não identificados não foram localizados depois do acidente. ";
 
@@ -308,9 +312,10 @@ public class ControleFalas : MonoBehaviour
             {
                 nome.text = "";
                 legenda.text = "";
+                NPCHandler.ChamarRAM();
                 /*isFinish = false;
                 isPlayerInTable = false;
-
+                
                 nome.text = "Agnes:";
                 legenda.text = "Tão imundas, acho que por isso que o computador do Gabriel não funciona mais. Pode dar uma olhada aí ?";
                 StartCoroutine(waiter(4));*/
@@ -463,7 +468,7 @@ public class ControleFalas : MonoBehaviour
                 isFinish = false;
                 nome.text = "";
                 legenda.text = "";
-
+                NPCHandler.ChamarPlaca();
                 StartCoroutine(waiter(2));
             }
 
