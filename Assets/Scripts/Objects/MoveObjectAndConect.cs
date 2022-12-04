@@ -48,19 +48,19 @@ public class MoveObjectAndConect : MonoBehaviour
             }
             if (distanceFromDestiny < 0.01f)
             {
-                rb.isKinematic = false;
-                rb.useGravity = false;
-                isConected = true;
                 rb.transform.rotation = Quaternion.Euler(rotationPosition);
                 transform.position = conector.position;
+                isConected = true;
+                this.gameObject.isStatic = true;
             }
 
         }
 
     }
+
     void OnMouseDown()
     {
-        if (cameraTable.activeSelf)
+        if (cameraTable.activeSelf && !isConected)
         {
             rb.useGravity = false;
             screenPoint = camera.WorldToScreenPoint(scanPos);
@@ -72,7 +72,7 @@ public class MoveObjectAndConect : MonoBehaviour
     }
     void OnMouseDrag()
     {
-        if (cameraTable.activeSelf)
+        if (cameraTable.activeSelf && !isConected)
         {
             rb.useGravity = false;
             Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
