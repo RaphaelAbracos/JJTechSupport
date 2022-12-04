@@ -122,12 +122,6 @@ public class NPCHandler : MonoBehaviour
             {
                 controleFalas.isMontouPc = true;
                 isLoading = true;
-                yield return new WaitForSeconds(90);
-                Pc_teste2.SetActive(false);
-                gameOverScreen.Setup();
-                PlayerComplete.isCompleted = false;
-                action++;
-                isLoading = false;
             }
         }
     }
@@ -141,5 +135,15 @@ public class NPCHandler : MonoBehaviour
             NPC_1 = Instantiate(prefabs[0], spawnPosition.position, Quaternion.identity);
             yield return new WaitForSeconds(3);
         }
+    }
+
+    public IEnumerator DestroyAssassino()
+    {
+        yield return new WaitForSeconds(5);
+        Pc_teste2.SetActive(false);
+        gameOverScreen.Setup();
+        PlayerComplete.isCompleted = false;
+        action++;
+        isLoading = false;
     }
 }

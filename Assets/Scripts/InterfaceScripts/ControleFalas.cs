@@ -152,6 +152,7 @@ public class ControleFalas : MonoBehaviour
                 isFinish = false;
                 legenda.text = "Mais um turno… Pelo menos é melhor do que ficar naquela casa vazia";
                 nome.text = "Jerônimo:";
+                nome.color = Color.blue;
                 StartCoroutine(waiter(5));
 
             }
@@ -169,6 +170,7 @@ public class ControleFalas : MonoBehaviour
                 isPlayerInTable = false;
 
                 nome.text = "Rádio:";
+                nome.color = Color.gray;
                 legenda.text = "Em outras notícias, recebemos um relato não confirmado de um acidente na penitenciária da cidade na noite passada";
                 StartCoroutine(waiter(5));
 
@@ -178,6 +180,7 @@ public class ControleFalas : MonoBehaviour
                 isFinish = false;
                 isPlayerInTable = false;
                 nome.text = "Rádio:";
+                nome.color = Color.gray;
                 legenda.text = "Ainda não há estimativas do número de feridos";
 
                 //TIRAR DAQUI PARA RAPHAEL DEFINIR
@@ -192,6 +195,8 @@ public class ControleFalas : MonoBehaviour
                 isFinish = false;
 
                 nome.text = "Agnes:";
+                nome.color = Color.yellow;
+                nome.color = Color.yellow;
                 legenda.text = "Noite, Jerônimo. Começou agora?";
                 StartCoroutine(waiter(4));
 
@@ -201,6 +206,7 @@ public class ControleFalas : MonoBehaviour
                 isFinish = false;
 
                 nome.text = "Jerônimo:";
+                nome.color = Color.blue;
                 legenda.text = "Pois é. E pelo visto seu turno foi longo hoje";
                 StartCoroutine(waiter(4));
 
@@ -210,6 +216,7 @@ public class ControleFalas : MonoBehaviour
                 isFinish = false;
 
                 nome.text = "Agnes:";
+                nome.color = Color.yellow;
                 legenda.text = "Ainda bem que você tá aberto. Não tive tempo essa semana pra olhar essas peças. ";
                 StartCoroutine(waiter(5));
 
@@ -219,6 +226,7 @@ public class ControleFalas : MonoBehaviour
                 isFinish = false;
 
                 nome.text = "Agnes:";
+                nome.color = Color.yellow;
                 legenda.text = "Tão imundas, acho que por isso que o computador do Gabriel não funciona mais. Pode dar uma olhada aí ?";
                 StartCoroutine(waiter(5));
 
@@ -246,6 +254,7 @@ public class ControleFalas : MonoBehaviour
                 isFinish = false;
                 Missao.color = new Color(255, 244, 0, 255);
                 nome.text = "Agnes:";
+                nome.color = Color.yellow;
                 legenda.text = "Você viu a notícia sobre a prisão? Fiquei horrorizada. Justo hoje também. ";
                 StartCoroutine(waiter(5));
             }
@@ -255,6 +264,7 @@ public class ControleFalas : MonoBehaviour
                 isFinish = false;
 
                 nome.text = "Agnes:";
+                nome.color = Color.yellow;
                 legenda.text = "Eu até ia na igreja acender uma vela por conta do aniversário da morte da Aninha, mas fiquei assustada. Ai, lembro até hoje quando o pessoal aqui do bairro falou pra mim o que aconteceu. ";
                 StartCoroutine(waiter(7));
             }
@@ -264,6 +274,7 @@ public class ControleFalas : MonoBehaviour
                 isFinish = false;
 
                 nome.text = "Agnes:";
+                nome.color = Color.yellow;
                 legenda.text = "Nem parece que se passaram doze anos, parece que foi ontem. Mas eu vou acender a vela pra ela, nem que seja amanhã. ";
                 StartCoroutine(waiter(5));
             }
@@ -272,6 +283,7 @@ public class ControleFalas : MonoBehaviour
                 isFinish = false;
 
                 nome.text = "Jerônimo:";
+                nome.color = Color.blue;
                 legenda.text = "Você tem um bom coração, Agnes. Pronto, novo em folha. ";
 
                 StartCoroutine(waiter(4));
@@ -282,6 +294,7 @@ public class ControleFalas : MonoBehaviour
                 isFinish = false;
                 NPCHandler.isAgnisleft = true;
                 nome.text = "Rádio:";
+                nome.color = Color.gray;
                 legenda.text = "Acabamos de receber a confirmação que alguns detentos não identificados não foram localizados depois do acidente. ";
 
                 StartCoroutine(waiter(5));
@@ -291,6 +304,7 @@ public class ControleFalas : MonoBehaviour
                 isFinish = false;
 
                 nome.text = "Rádio:";
+                nome.color = Color.gray;
                 legenda.text = "Estamos com uma de nossas repórteres no local, e em breve retornaremos com mais notícias.";
 
                 StartCoroutine(waiter(5));
@@ -300,6 +314,7 @@ public class ControleFalas : MonoBehaviour
                 isFinish = false;
 
                 nome.text = "Morador Novo:";
+                nome.color = Color.cyan;
                 legenda.text = "Opa, moço. Você tem RAM a do meu PC queimou";
 
                 StartCoroutine(waiter(4));
@@ -309,6 +324,7 @@ public class ControleFalas : MonoBehaviour
                 isFinish = false;
 
                 nome.text = "Jerônimo:";
+                nome.color = Color.blue;
                 legenda.text = "Boa noite, vamos ver";
 
                 StartCoroutine(waiter(2));
@@ -334,6 +350,7 @@ public class ControleFalas : MonoBehaviour
                 isFinish = false;
                 Missao1.color = new Color(255, 244, 0, 255);
                 nome.text = "Morador Novo:";
+                nome.color = Color.cyan;
                 legenda.text = "Cara, cê viu a notícia? Muito doido";
 
                 StartCoroutine(waiter(3));
@@ -343,6 +360,7 @@ public class ControleFalas : MonoBehaviour
                 isFinish = false;
 
                 nome.text = "Morador Novo:";
+                nome.color = Color.cyan;
                 legenda.text = "Essa cidade tá ficando cada vez melhor. Esses dias tavam me contando de um assassinato que rolou aqui uns anos atrás. Falaram que a menina ficou cinco dias presa com um cara e acharam ela só duas semanas depois.";
 
                 StartCoroutine(waiter(8));
@@ -352,6 +370,7 @@ public class ControleFalas : MonoBehaviour
                 isFinish = false;
 
                 nome.text = "Morador Novo:";
+                nome.color = Color.cyan;
                 legenda.text = "Levaram ela do lado da escola, cê acredita? É muita incompetência mesmo, ainda mais quando você pensa que…";
 
                 StartCoroutine(waiter(6));
@@ -361,6 +380,7 @@ public class ControleFalas : MonoBehaviour
                 isFinish = false;
 
                 nome.text = "Jerônimo:";
+                nome.color = Color.blue;
                 legenda.text = "A peça tá encaixada. Boa noite pra você.";
 
                 StartCoroutine(waiter(4));
@@ -370,6 +390,7 @@ public class ControleFalas : MonoBehaviour
                 isFinish = false;
 
                 nome.text = "Morador Novo:";
+                nome.color = Color.cyan;
                 legenda.text = "Nossa, calma cara. Beleza, tô vazando. ";
 
                 StartCoroutine(waiter(4));
@@ -382,6 +403,7 @@ public class ControleFalas : MonoBehaviour
                 isFinish = false;
 
                 nome.text = "Homem:";
+                nome.color = Color.red;
                 legenda.text = "   ...   ";
 
                 StartCoroutine(waiter(3));
@@ -391,6 +413,7 @@ public class ControleFalas : MonoBehaviour
                 isFinish = false;
 
                 nome.text = "Jerônimo:";
+                nome.color = Color.blue;
                 legenda.text = "Ahn… Boa noite. No que posso ajudar?";
 
                 StartCoroutine(waiter(4));
@@ -400,6 +423,7 @@ public class ControleFalas : MonoBehaviour
                 isFinish = false;
 
                 nome.text = "Homem:";
+                nome.color = Color.red;
                 legenda.text = "    ...   ";
 
                 StartCoroutine(waiter(2));
@@ -409,6 +433,7 @@ public class ControleFalas : MonoBehaviour
                 isFinish = false;
 
                 nome.text = "Homem:";
+                nome.color = Color.red;
                 legenda.text = "Eu queria que você montasse um computador pra mim com o software RBCR nele.";
 
                 StartCoroutine(waiter(4));
@@ -418,6 +443,7 @@ public class ControleFalas : MonoBehaviour
                 isFinish = false;
 
                 nome.text = "Jerônimo:";
+                nome.color = Color.blue;
                 legenda.text = "Certo… Tem alguma coisa em mente? ";
 
                 StartCoroutine(waiter(4));
@@ -427,6 +453,7 @@ public class ControleFalas : MonoBehaviour
                 isFinish = false;
 
                 nome.text = "Homem:";
+                nome.color = Color.red;
                 legenda.text = "Usa as suas melhores peças. Quero ele completamente funcional. ";
 
                 StartCoroutine(waiter(5));
@@ -436,6 +463,7 @@ public class ControleFalas : MonoBehaviour
                 isFinish = false;
 
                 nome.text = "Jerônimo:";
+                nome.color = Color.blue;
                 legenda.text = "Ok, só vai levar um tempo.";
 
                 StartCoroutine(waiter(3));
@@ -445,6 +473,7 @@ public class ControleFalas : MonoBehaviour
                 isFinish = false;
 
                 nome.text = "Homem:";
+                nome.color = Color.red;
                 legenda.text = "Agora eu tenho tempo de sobra.";
 
                 StartCoroutine(waiter(3));
@@ -454,6 +483,7 @@ public class ControleFalas : MonoBehaviour
                 isFinish = false;
 
                 nome.text = "Jerônimo:";
+                nome.color = Color.blue;
                 legenda.text = "E vai ser caro. ";
 
                 StartCoroutine(waiter(2));
@@ -463,6 +493,7 @@ public class ControleFalas : MonoBehaviour
                 isFinish = false;
 
                 nome.text = "Homem:";
+                nome.color = Color.red;
                 legenda.text = "Eu pago. ";
 
                 StartCoroutine(waiter(2));
@@ -482,6 +513,7 @@ public class ControleFalas : MonoBehaviour
                 isFinish = false;
                 Missao2.color = new Color(255, 244, 0, 255);
                 nome.text = "Homem:";
+                nome.color = Color.red;
                 legenda.text = "Você mora aqui há bastante tempo?";
 
                 StartCoroutine(waiter(3));
@@ -490,6 +522,7 @@ public class ControleFalas : MonoBehaviour
             {
                 isFinish = false;
                 nome.text = "Jerônimo:";
+                nome.color = Color.blue;
                 legenda.text = "Minha vida toda. ";
 
                 StartCoroutine(waiter(2));
@@ -498,6 +531,7 @@ public class ControleFalas : MonoBehaviour
             {
                 isFinish = false;
                 nome.text = "Homem:";
+                nome.color = Color.red;
                 legenda.text = "Nunca gostei desse lugar. Qualquer coisinha vira escândalo, todo mundo comenta. As outras cidades que trabalhei eram bem mais discretas. ";
 
                 StartCoroutine(waiter(5));
@@ -506,6 +540,7 @@ public class ControleFalas : MonoBehaviour
             {
                 isFinish = false;
                 nome.text = "Homem:";
+                nome.color = Color.red;
                 legenda.text = "Você podia fazer qualquer coisa e ser invisível. ";
 
                 StartCoroutine(waiter(3));
@@ -514,6 +549,7 @@ public class ControleFalas : MonoBehaviour
             {
                 isFinish = false;
                 nome.text = "Jerônimo:";
+                nome.color = Color.blue;
                 legenda.text = "Eu gosto do pessoal da cidade. São pessoas boas. ";
 
                 StartCoroutine(waiter(2));
@@ -522,6 +558,7 @@ public class ControleFalas : MonoBehaviour
             {
                 isFinish = false;
                 nome.text = "Homem:";
+                nome.color = Color.red;
                 legenda.text = "Todas elas? Até mesmo escolas que negligenciam sua responsabilidade com as crianças ? Ou a polícia que ignora denúncias de desaparecimentos? ";
 
                 StartCoroutine(waiter(6));
@@ -531,6 +568,7 @@ public class ControleFalas : MonoBehaviour
                 isFinish = false;
                 isFinish = false;
                 nome.text = "Jerônimo:";
+                nome.color = Color.blue;
                 legenda.text = "As pessoas que eu conheço são boas.";
 
                 StartCoroutine(waiter(3));
@@ -539,6 +577,7 @@ public class ControleFalas : MonoBehaviour
             {
                 isFinish = false;
                 nome.text = "Homem:";
+                nome.color = Color.red;
                 legenda.text = "Não. O mundo é cheio de monstros, você já deveria saber disso. ";
 
                 StartCoroutine(waiter(3));
@@ -547,6 +586,7 @@ public class ControleFalas : MonoBehaviour
             {
                 isFinish = false;
                 nome.text = "Homem:";
+                nome.color = Color.red;
                 legenda.text = "Não sei que tipo de sem noção traria uma criança pra esse mundo. Você tem filhos, Jerônimo? ";
 
                 StartCoroutine(waiter(4));
@@ -555,6 +595,7 @@ public class ControleFalas : MonoBehaviour
             {
                 isFinish = false;
                 nome.text = "Jerônimo:";
+                nome.color = Color.blue;
                 legenda.text = "Uma menina.";
 
                 StartCoroutine(waiter(2));
@@ -563,6 +604,7 @@ public class ControleFalas : MonoBehaviour
             {
                 isFinish = false;
                 nome.text = "Homem:";
+                nome.color = Color.red;
                 legenda.text = "Interessante. Ela gosta de futebol? ";
 
                 StartCoroutine(waiter(3));
@@ -571,6 +613,7 @@ public class ControleFalas : MonoBehaviour
             {
                 isFinish = false;
                 nome.text = "Jerônimo:";
+                nome.color = Color.blue;
                 legenda.text = "Muito.   ";
 
                 StartCoroutine(waiter(2));
@@ -579,6 +622,7 @@ public class ControleFalas : MonoBehaviour
             {
                 isFinish = false;
                 nome.text = "Homem:";
+                nome.color = Color.red;
                 legenda.text = "Igualzinha ao pai. Aposto que ela era o tipo de fã que tinha adesivos dos jogadores no caderno da escola.";
 
                 StartCoroutine(waiter(5));
@@ -587,6 +631,7 @@ public class ControleFalas : MonoBehaviour
             {
                 isFinish = false;
                 nome.text = "Rádio:";
+                nome.color = Color.gray;
                 legenda.text = "Atenção. Um detento extremamente perigoso está à solta na cidade após o acidente na penitenciária. ";
 
                 StartCoroutine(waiter(5));
@@ -595,6 +640,7 @@ public class ControleFalas : MonoBehaviour
             {
                 isFinish = false;
                 nome.text = "Rádio:";
+                nome.color = Color.gray;
                 legenda.text = "Ele é um homem branco, tem estatura mediana e barba castanha escura. Se ver alguém assim, contate as autoridades imediatamente e não se aproxime.";
 
                 StartCoroutine(waiter(6));
@@ -603,6 +649,7 @@ public class ControleFalas : MonoBehaviour
             {
                 isFinish = false;
                 nome.text = "Jerônimo:";
+                nome.color = Color.blue;
                 legenda.text = "   ....  ";
 
                 StartCoroutine(waiter(2));
@@ -611,6 +658,7 @@ public class ControleFalas : MonoBehaviour
             {
                 isFinish = false;
                 nome.text = "Homem:";
+                nome.color = Color.red;
                 legenda.text = "E usava a camisa do time nas aulas de educação física. ";
 
                 StartCoroutine(waiter(4));
@@ -619,6 +667,7 @@ public class ControleFalas : MonoBehaviour
             {
                 isFinish = false;
                 nome.text = "Jerônimo:";
+                nome.color = Color.blue;
                 legenda.text = "Eu… Eu tô quase acabando. ";
 
                 StartCoroutine(waiter(3));
@@ -635,6 +684,7 @@ public class ControleFalas : MonoBehaviour
             {
                 isFinish = false;
                 nome.text = "Jerônimo:";
+                nome.color = Color.blue;
                 legenda.text = "Quem é você?";
 
                 StartCoroutine(waiter(3));
@@ -643,6 +693,7 @@ public class ControleFalas : MonoBehaviour
             {
                 isFinish = false;
                 nome.text = "Homem:";
+                nome.color = Color.red;
                 legenda.text = "Aposto que ela ficou arrasada quando soube. Ela tinha cara de quem chorava muito. Acho que a Aninha puxou isso dela. ";
 
                 StartCoroutine(waiter(5));
@@ -651,6 +702,7 @@ public class ControleFalas : MonoBehaviour
             {
                 isFinish = false;
                 nome.text = "Jerônimo:";
+                nome.color = Color.blue;
                 legenda.text = "Sai da minha loja ou eu chamo a polícia. ";
 
                 StartCoroutine(waiter(3));
@@ -659,6 +711,7 @@ public class ControleFalas : MonoBehaviour
             {
                 isFinish = false;
                 nome.text = "Homem:";
+                nome.color = Color.red;
                 legenda.text = "Pena que não dei tempo pra ela chorar. Fiquei muitos anos esperando pra terminar o trabalho.";
 
                 StartCoroutine(waiter(4));
@@ -667,6 +720,7 @@ public class ControleFalas : MonoBehaviour
             {
                 isFinish = false;
                 nome.text = "Homem:";
+                nome.color = Color.red;
                 legenda.text = "Agora só restou você. Completamente sozinho.";
 
                 StartCoroutine(waiter(3));
@@ -675,9 +729,11 @@ public class ControleFalas : MonoBehaviour
             {
                 isFinish = false;
                 nome.text = "Homem:";
+                nome.color = Color.red;
                 legenda.text = "Dá oi pra Aninha por mim.";
 
                 StartCoroutine(waiter(3));
+                StartCoroutine(NPCHandler.DestroyAssassino());
             }
 
             //(Jerônimo morre)
